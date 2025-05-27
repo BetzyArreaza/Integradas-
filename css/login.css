@@ -1,19 +1,23 @@
-/* galeria.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff8f2;
+  background-color: #fdf7f3;
   color: #333;
 }
 
+/* Encabezado */
 header {
   background-color: #d94f30;
   padding: 1rem 2rem;
   color: white;
 }
 
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,15 +28,13 @@ nav {
   font-weight: bold;
 }
 
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 1rem;
-  padding: 0;
-  margin: 0;
 }
 
-nav ul li a {
+.nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -40,49 +42,92 @@ nav ul li a {
   border-radius: 5px;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+.nav-links li a:hover,
+.nav-links li a.active {
   background-color: #ff7043;
 }
 
-.hamburguesa {
-  display: none;
+/* Contenedor de login */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
 }
 
-/* Título principal */
-main h1 {
+.login-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
-  margin: 2rem 0;
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
   color: #d94f30;
 }
 
-/* Galería */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  padding: 0 2rem 3rem;
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.galeria img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.login-container input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
-.galeria img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.login-container input:focus {
+  border-color: #d94f30;
+  outline: none;
+}
+
+.login-container button {
+  padding: 0.75rem;
+  background-color: #d94f30;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #bf3d21;
+}
+
+/* Mensaje */
+#mensajeLogin {
+  margin-top: 1rem;
+  color: #e53935;
 }
 
 /* Footer */
 footer {
+  background-color: #eee;
   text-align: center;
   padding: 1rem;
-  background-color: #eee;
   font-size: 0.9rem;
   color: #666;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .login-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
 }
