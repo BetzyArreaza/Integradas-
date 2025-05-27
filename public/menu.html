@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú Italiano</title>
+  <link rel="stylesheet" href="../css/menu.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">VenProductos</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="menu.html" class="active">Menú</a></li>
+        <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Platos Italianos</h1>
+    <div class="menu-container">
+      <div class="plato" data-nombre="Lasagna" data-precio="80">
+        <img src="https://newmansown.com/wp-content/uploads/2022/03/Homemade-lasagna.png" alt="Lasagna">
+        <h3>Lasagna</h3>
+        <p>Precio: Q80</p>
+        <button onclick="agregarAlCarrito(this)">Agregar</button>
+      </div>
+      <div class="plato" data-nombre="Pizza Margarita" data-precio="60">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg" alt="Pizza Margarita">
+        <h3>Pizza Margarita</h3>
+        <p>Precio: Q60</p>
+        <button onclick="agregarAlCarrito(this)">Agregar</button>
+      </div>
+      <div class="plato" data-nombre="Spaghetti Carbonara" data-precio="70">
+        <img src="https://www.recetassinlactosa.com/wp-content/uploads/2015/06/Espaguetis-Carbonara-1.jpg.webp" alt="Spaghetti Carbonara">
+        <h3>Spaghetti Carbonara</h3>
+        <p>Precio: Q70</p>
+        <button onclick="agregarAlCarrito(this)">Agregar</button>
+      </div>
+    </div>
+
+    <section class="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito"></ul>
+      <p>Total: Q<span id="total">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 VenProductos</p>
+  </footer>
+
+  <script src="../js/carrito.js"></script>
+  <script src="../js/logout.js"></script>
+</body>
+</html>
