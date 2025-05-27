@@ -1,3 +1,5 @@
-function cerrarSesion(){
-    window.location.href = "../public/login.html"
+function cerrarSesion() {
+  localStorage.removeItem('logueado');
+  localStorage.removeItem('usuario');
+  window.location.href = "login.html";
 }
